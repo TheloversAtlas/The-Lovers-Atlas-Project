@@ -67,3 +67,9 @@
   margin: 0 auto;
   object-fit: contain;
 }. 
+
+/* Citizen Registry visual emphasis */
+.registry-card {
+  border: 1px solid rgba(213, 170, 98, 0.58);
+  box-shadow: 0 0 32px rgba(213, 170, 98, 0.08);
+}
