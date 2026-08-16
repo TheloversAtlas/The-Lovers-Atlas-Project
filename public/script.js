@@ -112,3 +112,32 @@ form?.addEventListener('submit', async (event) => {
     formStatus.classList.add('error');
   }
 });
+
+
+// iPhone / Safari hero video playback
+const heroVideo = document.querySelector('.hero-video');
+
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.defaultMuted = true;
+  heroVideo.playsInline = true;
+
+  const startHeroVideo = () => {
+    const playAttempt = heroVideo.play();
+
+    if (playAttempt !== undefined) {
+      playAttempt.catch(() => {
+        // Safari may require the first user interaction.
+      });
+    }
+  };
+
+  startHeroVideo();
+
+  ['touchstart', 'click'].forEach((eventName) => {
+    document.addEventListener(eventName, startHeroVideo, {
+      once: true,
+      passive: true
+    });
+  });
+}
