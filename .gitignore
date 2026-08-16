@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+*.log
+.DS_Store
+
+# Paradise video working files / exports
+public/assets/paradise-hq.m4v
+public/assets/paradise-loop-[0-9]*.m4v
+public/assets/paradise-loop-hq-backup.m4v
+public/assets/paradise-loop-hq-2.m4v

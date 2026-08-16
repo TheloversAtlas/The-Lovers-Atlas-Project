@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050505" />
+  <title>The Lover's Atlas — Paradise</title>
+  <meta name="description" content="Enter The Lover's Atlas. Destination 002: Paradise." />
+  <link rel="canonical" href="https://entertheatlas.world/" />
+  <meta property="og:title" content="The Lover's Atlas — Paradise" />
+  <meta property="og:description" content="Destination 002: Paradise. Enter the Atlas and register as a Citizen." />
+  <meta property="og:url" content="https://entertheatlas.world/" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="topbar">
+    <button class="brand-button" data-scroll="top">THE LOVER'S ATLAS</button>
+    <button class="registry-link" data-scroll="registry">CITIZEN REGISTRY</button>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/paradise-poster.jpg">
+        <source src="assets/paradise-loop.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-gradient"></div>
+      <div class="stars" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="atlas-orbit">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <img src="assets/lovers-atlas-logo.jpg" alt="The Lover's Atlas emblem" class="atlas-logo" />
+        </div>
+
+        <p class="eyebrow">THE LOVER'S ATLAS PRESENTS</p>
+        <p class="destination">DESTINATION 002</p>
+        <h1 class="paradise-title"><img src="assets/paradise-title.png" alt="Paradise"></h1>
+        <p class="tagline">Every heart carries a map.<br>Every map leads somewhere.</p>
+
+        <div class="hero-actions">
+          <button class="primary" data-scroll="paradise">ENTER THE ATLAS</button>
+          <button class="secondary" id="watchParadise">WATCH PARADISE</button>
+        </div>
+
+        <p class="coordinates">18.9712° N · 72.2852° W</p>
+      </div>
+
+      <button class="scroll-cue" data-scroll="paradise" aria-label="Continue">↓</button>
+    </section>
+
+    <section class="section paradise" id="paradise">
+      <div class="section-intro center">
+        <p class="eyebrow">CHAPTER I · WARM WATERS</p>
+        <h2>You have arrived in Paradise.</h2>
+        <p>Paradise is one doorway into a larger world of love, identity, culture, memory and discovery.</p>
+      </div>
+
+      <div class="video-window reveal">
+        <video autoplay muted loop playsinline poster="assets/paradise-poster.jpg">
+          <source src="assets/paradise-loop.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay"></div>
+        <div class="video-caption">
+          <div>
+            <span>NOW ENTERING</span>
+            <strong>PARADISE</strong>
+          </div>
+          <button class="secondary" id="watchParadiseTwo">WATCH FULL VIDEO</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section map-section">
+      <div class="map-emblem reveal">
+        <div class="pulse-ring"></div>
+        <img src="assets/lovers-atlas-logo.jpg" alt="The Lover's Atlas globe logo" />
+      </div>
+
+      <div class="section-intro reveal">
+        <p class="eyebrow">THE MAP IS OPEN</p>
+        <h2>Every song is a destination.</h2>
+        <p>The music opens the door. The Atlas gives each release a place, a story and a memory.</p>
+        <div class="route">
+          <span>THE MAP</span><i></i>
+          <span>JUJU</span><i></i>
+          <span class="active">PARADISE</span><i></i>
+          <span>HONEY</span><i></i>
+          <span class="locked">COORDINATES LOCKED</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section registry-section" id="registry">
+      <div class="registry-card reveal">
+        <div class="registry-copy">
+          <p class="eyebrow">CITIZEN REGISTRY</p>
+          <h2>The first 1,000 are being documented.</h2>
+          <p>Register your arrival and become part of the founding generation of Citizens of the Atlas.</p>
+          <div class="counter">
+            <strong id="citizenCount">000</strong>
+            <span>/ 1000 FOUNDING CITIZENS</span>
+          </div>
+        </div>
+
+        <form id="registryForm" class="registry-form">
+          <label>Name<input name="name" type="text" placeholder="YOUR NAME" autocomplete="name" required></label>
+          <label>Email<input name="email" type="email" placeholder="YOUR EMAIL" autocomplete="email" required></label>
+          <label class="consent-row">
+            <input name="emailConsent" type="checkbox" value="true">
+            <span>Send me Citizen Dispatches, new coordinates and Atlas updates by email.</span>
+          </label>
+          <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="primary form-button">REGISTER AS A CITIZEN</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="fine-print">By registering, your entry is documented in the Citizen Registry. Email updates are optional. <a href="privacy.html">Privacy</a></p>
+        </form>
+
+        <div class="success" id="successPanel" hidden>
+          <p class="eyebrow">ENTRY CONFIRMED</p>
+          <h3>Welcome, Citizen.</h3>
+          <p class="citizen-id" id="citizenId">COTA-0001</p>
+          <p>Your first documented destination is <strong>Paradise</strong>.</p>
+          <img src="assets/passport.png" alt="Citizens of the Atlas Passport prototype" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section artifact-section">
+      <div class="artifact-copy reveal">
+        <p class="eyebrow">THE PHYSICAL WORLD</p>
+        <h2>Your journey does not end on a screen.</h2>
+        <p>The Atlas Passport can connect Citizen identity, destinations, stamps, access and future experiences.</p>
+        <button class="primary" data-scroll="registry">CLAIM YOUR ENTRY</button>
+      </div>
+      <img class="passport-sheet reveal" src="assets/passport.png" alt="Citizens of the Atlas Passport prototype sheet" />
+    </section>
+
+    <section class="citizens-section">
+      <img src="assets/citizens-atlas.png" alt="Citizens of the Atlas artwork" class="citizens-art" />
+      <div class="citizens-shade"></div>
+      <div class="citizens-copy reveal">
+        <p class="eyebrow">CITIZENS OF THE ATLAS</p>
+        <h2>No matter where you came from, once you enter the Atlas, you belong.</h2>
+        <button class="primary" data-scroll="registry">ENTER THE REGISTRY</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/lovers-atlas-logo.jpg" alt="The Lover's Atlas" />
+    <p>THE LOVER'S ATLAS · DESTINATION 002</p>
+    <p class="domain-links"><a href="https://entertheatlas.world">ENTERTHEATLAS.WORLD</a> · <a href="https://theloversatlas.com">THELOVERSATLAS.COM</a></p>
+    <p class="safe">Safe travels, Citizens.</p>
+  </footer>
+
+  <div class="modal" id="videoModal" hidden>
+    <button class="modal-close" id="closeVideo" aria-label="Close video">×</button>
+    <video id="fullVideo" controls playsinline poster="assets/paradise-poster.jpg">
+      <source src="assets/paradise-full.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
