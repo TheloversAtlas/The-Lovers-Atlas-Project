@@ -1,8 +1,19 @@
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 
+function trackEvent(eventName, parameters = {}) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', eventName, parameters);
+  }
+}
+
 $$('[data-scroll]').forEach((button) => {
   button.addEventListener('click', () => {
+    if (button.dataset.scroll === 'registry') {
+  trackEvent('registry_navigation_click', {
+    location: button.classList.contains('registry-link') ? 'top_navigation' : 'page_cta'
+  });
+}
     document.getElementById(button.dataset.scroll)?.scrollIntoView({ behavior: 'smooth' });
   });
 });
@@ -11,6 +22,10 @@ const modal = $('#videoModal');
 const fullVideo = $('#fullVideo');
 
 function openVideo() {
+  trackEvent('watch_paradise', {
+  content_type: 'video',
+  content_id: 'paradise'
+});
   modal.hidden = false;
   document.body.style.overflow = 'hidden';
   fullVideo.play().catch(() => {});
@@ -98,6 +113,10 @@ form?.addEventListener('submit', async (event) => {
     citizenId.textContent = data.citizen.citizen_number;
     form.hidden = true;
     successPanel.hidden = false;
+    trackEvent('sign_up', {
+  method: 'citizen_registry',
+  founding_citizen: data.citizen.founding_citizen ? 'yes' : 'no'
+});
 
     if (data.citizen.founding_citizen) {
       successPanel.classList.add('founding');
