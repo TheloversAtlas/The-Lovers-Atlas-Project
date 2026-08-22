@@ -94,15 +94,15 @@
 }
 .passport-preview{
   width:min(340px,82vw);
-  aspect-ratio:3/4.25;
+  aspect-ratio:3/3.95;
   justify-self:center;
   border-radius:18px;
   border:1px solid rgba(213,170,88,.42);
   background-color:#090806;
   background-image:linear-gradient(rgba(0,0,0,.04),rgba(0,0,0,.04)),url("assets/passport.png");
   background-repeat:no-repeat;
-  background-size:1120% auto;
-  background-position:26.2% 5.7%;
+  background-size:1040% auto;
+  background-position:26.1% 5.7%;
   box-shadow:0 30px 90px rgba(0,0,0,.68),0 0 38px rgba(213,170,88,.08);
 }
 .passport-features{
