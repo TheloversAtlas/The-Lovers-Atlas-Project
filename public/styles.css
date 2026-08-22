@@ -101,8 +101,8 @@
   background-color:#090806;
   background-image:linear-gradient(rgba(0,0,0,.04),rgba(0,0,0,.04)),url("assets/passport.png");
   background-repeat:no-repeat;
-  background-size:850% auto;
-  background-position:25.5% 2.5%;
+  background-size:980% auto;
+  background-position:25.8% 4.5%;
   box-shadow:0 30px 90px rgba(0,0,0,.68),0 0 38px rgba(213,170,88,.08);
 }
 .passport-features{
